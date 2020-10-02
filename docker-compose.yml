@@ -1,0 +1,12 @@
+version: "3"
+services:
+  react-navigation:
+    build: ./
+    volumes:
+      - ./react-navigation/:/usr/src/app
+    env_file: .env
+    command: bash -c "cd example && yarn start"
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
